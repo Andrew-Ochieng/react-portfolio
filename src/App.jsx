@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
-        <div className='md:m-8 m-4 text-gray-200'>
+        <div className='md:m-8 m-4 lg:mx-28 md:mx-16 text-gray-200'>
           <Routes>
               <Route path='/' element={ <Home /> } />
           </Routes>
