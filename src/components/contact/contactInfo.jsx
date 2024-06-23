@@ -7,11 +7,11 @@ const ContactInfo = () => {
         <div>
             <div className="">
                 <div>
-                    <img src={contactImg} alt="" />
+                    <img className='md:w-96 md:h-96' src={contactImg} alt="" />
                 </div>
             </div>
             <p className="">
-                Phone: +254710815080 <br />
+                Phone: +2547 1081 5080 <br />
                 Email: andrewomosh44@gmail.com <br />
             </p>
             <p className="mt-2 font-medium text-slate-400">FIND WITH ME</p>
