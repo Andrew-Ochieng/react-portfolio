@@ -31,7 +31,7 @@ body {
   }
 
   .icon-btn {
-    @apply rounded-lg shadow-lg text-slate-400 md:shadow-xl md:shadow-slate-800 shadow-zinc-900 bg-slate-800 hover:bg-slate-950 md:p-3 p-2 md:my-4 my-3 mx-2
+    @apply rounded-lg shadow-lg text-slate-400 md:shadow-lg md:shadow-slate-800 shadow-zinc-900 bg-slate-800 hover:bg-slate-950 md:p-3 p-2 md:my-4 my-3 mx-2
   }
 
   .skills-img {

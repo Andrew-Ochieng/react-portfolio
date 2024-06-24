@@ -1,7 +1,8 @@
-import { FaGithub, FaGoogle, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import contactImg from "../../assets/contact.svg"
+import {socialsData} from "../../data/data"
 
 const ContactInfo = () => {
+    
     
     return ( 
         <div>
@@ -16,10 +17,16 @@ const ContactInfo = () => {
             </p>
             <p className="mt-2 font-medium text-slate-400">FIND WITH ME</p>
             <div>
-                <button className="icon-btn"><FaGithub /></button>
-                <button className="icon-btn"><FaLinkedinIn /> </button>
-                <button className="icon-btn"><FaGoogle /></button>
-                <button className="icon-btn"><FaTwitter /></button>
+                {socialsData.map((social, index) => (
+                    <button key={index} className="icon-btn">
+                        <a  
+                            href={social.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >{social.icon}
+                    </a>
+                    </button>
+                ))}
             </div>
         </div>
      );

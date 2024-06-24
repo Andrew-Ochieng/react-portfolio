@@ -4,6 +4,30 @@ import img3 from "../assets/img3.png"
 import img4 from "../assets/img4.jpg"
 import img5 from "../assets/img5.jpg"
 import img6 from "../assets/img6.jpg"
+import { FaGithub, FaGoogle, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+
+const  socialsData = [
+    {
+        name: "Github",
+        link: "https://github.com/Andrew-Ochieng",
+        icon: <FaGithub />
+    },
+    {
+        name: "LinkedIn",
+        link: "https://www.linkedin.com/in/andrew-ochieng-00b076180/",
+        icon: <FaLinkedinIn />
+    },
+    {
+        name: "Google",
+        link: "andrewomosh44@gmail.com",
+        icon: <FaGoogle />
+    },
+    {
+        name: "Twitter",
+        link: "https://x.com/Andrew__dev",
+        icon: <FaTwitter />
+    }
+]
 
 const servicesData = [
     {
@@ -60,4 +84,4 @@ const projectsData = [
 ]
 
 
-export { projectsData, servicesData }
+export { projectsData, servicesData, socialsData }
