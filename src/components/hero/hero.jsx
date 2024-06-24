@@ -28,7 +28,7 @@ const Hero = () => {
                     <p className="font-light">
                         Experienced Full Stack Developer with a demonstrated history of 
                         working in the internet industry. Building Web applications with
-                         React, Javascript, Python, Django, Ruby, Ruby on Rails, MySQL/Postgres 
+                         React, Javascript, Python, Django, Ruby, Ruby on Rails, MySQL & Postgres 
                          and some other cool libraries and frameworks.
                     </p>
                     <div>

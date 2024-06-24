@@ -16,7 +16,7 @@ const servicesData = [
     },
     {
         name: "Payment Integration",
-        details: "I do payment Integration to automate the process of payment. I can integrate with payment gateways."
+        details: "I do payment Integration to automate the process of payment. I can integrate with M-Pesa, Paypal and Stripe payment gateways."
     }
 ]
 
