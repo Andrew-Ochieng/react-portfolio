@@ -12,7 +12,7 @@ const servicesData = [
     },
     {
         name: "API Design/ Intergration",
-        details: "Developing highly secure, fast and scalable Restful API for your application."
+        details: "Developing highly secure, fast and scalable Restful API's for your application."
     },
     {
         name: "Payment Integration",
