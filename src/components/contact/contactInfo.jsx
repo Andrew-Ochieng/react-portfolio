@@ -7,11 +7,12 @@ const ContactInfo = () => {
     return ( 
         <div>
             <div className="">
-                <div>
-                    <img className='md:w-96 md:h-96' src={contactImg} alt="" />
+                <div className="flex justify-center">
+                    <img className='md:w-80 md:h-80' src={contactImg} alt="" />
                 </div>
             </div>
-            <p className="">
+            <div className="flex flex-col items-center">
+            <p>
                 Phone: +2547 1081 5080 <br />
                 Email: andrewomosh44@gmail.com <br />
             </p>
@@ -27,6 +28,7 @@ const ContactInfo = () => {
                     </a>
                     </button>
                 ))}
+            </div>
             </div>
         </div>
      );

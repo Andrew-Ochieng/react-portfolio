@@ -1,9 +1,9 @@
 import img1 from "../assets/img1.jpg"
 import img2 from "../assets/img2.jpg"
 import img3 from "../assets/img3.png"
-import img4 from "../assets/img4.jpg"
+import img4 from "../assets/img4.png"
 import img5 from "../assets/img5.jpg"
-import img6 from "../assets/img6.jpg"
+import img6 from "../assets/img6.png"
 import { FaGithub, FaGoogle, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const  socialsData = [
@@ -58,29 +58,30 @@ const projectsData = [
         details: "A tech company that manages your bussiness without having to worry about the the software solutions you are using. Less hustle more growth."
     },
     {
-        name: "Trinity Baptist Church",
-        link: "https://trinitybaptistfunyula.co.ke",
+        name: "Lumbz Sportswear",
+        link: "https://lumbzsportswear.com",
         image: img3,
-        details: "We exist to glorify God through the preaching and teaching of the Bible with the aim that sinners will be saved and that saints will grow to Christian maturity"
+        details: "One-stop shop for quality sportswear. Providing top-notch sportswear since 2023."
     },
     {
-        name: "Afrikaan Eatery",
-        link: "https://afrikaan-eatery.vercel.app",
+        name: "Savanna Academy",
+        link: "https://savannaacademy.com",
         image: img4,
-        details: "Platform where people can order African Dishes from restaurants"
+        details: "We offer training programs in Software Development, Cyber Security, Graphics Design and Digital Marketing under the instruction of industry experts."
     },
     {
         name: "Engstan Solutions",
         link: "https://engstansolutions.co.ke",
         image: img5,
-        details: "A branding business that helps users order branded products from the comfort of their home"
+        details: "A branding business that helps customers order branded products from the comfort of their home"
     },
     {
-        name: "Medical Zone",
-        link: "https://github.com/Andrew-Ochieng/medical-zone-frontend",
+        name: "Ng’ara Maisha Sacco",
+        link: "https://nmsacco.co.ke",
         image: img6,
-        details: "A platform where patients can keep track of their medical appointment & history"
+        details: "We are a cooperative society committed to improving the financial well-being of its members through innovative and member-centric financial solutions"
     },
+    
 ]
 
 
