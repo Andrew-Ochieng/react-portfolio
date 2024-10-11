@@ -53,7 +53,7 @@ const projectsData = [
     },
     {
         name: "Vabrise Technologies",
-        link: "http://vabrisetech.com",
+        link: "https://vabrisetech.com",
         image: img2,
         details: "A tech company that manages your bussiness without having to worry about the the software solutions you are using. Less hustle more growth."
     },
