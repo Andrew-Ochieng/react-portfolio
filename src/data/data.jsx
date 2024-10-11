@@ -4,7 +4,8 @@ import img3 from "../assets/img3.png"
 import img4 from "../assets/img4.png"
 import img5 from "../assets/img5.jpg"
 import img6 from "../assets/img6.png"
-import { FaGithub, FaGoogle, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { IoMailOutline } from "react-icons/io5";
 
 const  socialsData = [
     {
@@ -18,9 +19,9 @@ const  socialsData = [
         icon: <FaLinkedinIn />
     },
     {
-        name: "Google",
-        link: "andrewomosh44@gmail.com",
-        icon: <FaGoogle />
+        name: "Gmail",
+        link: "mailto:andrewomosh44@gmail.com",
+        icon: <IoMailOutline />
     },
     {
         name: "Twitter",

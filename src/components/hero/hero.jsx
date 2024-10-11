@@ -1,6 +1,7 @@
 import { FaGithub, FaGoogle, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import hero from "../../assets/hero.png"
 import { Typewriter } from "react-simple-typewriter";
+import { socialsData } from "../../data/data";
 
 const Hero = () => {
     return ( 
@@ -43,10 +44,19 @@ const Hero = () => {
                         </button>
                     </div>
                     <div>
-                        <button className="icon-btn"><FaGithub /></button>
-                        <button className="icon-btn"><FaLinkedinIn /> </button>
-                        <button className="icon-btn"><FaGoogle /></button>
-                        <button className="icon-btn"><FaTwitter /></button>
+                        {socialsData.map((social, index) => (
+                            <button key={index} className="icon-btn">
+                                <a  
+                                    className="text-xl"
+                                    href={social.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Visit ${social.name}`}
+                                >
+                                    {social.icon}
+                                </a>
+                            </button>
+                        ))}
                     </div>
                 </div>
 
