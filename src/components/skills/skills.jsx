@@ -1,36 +1,20 @@
+import {skillsData} from "../../data/data";
+
 const Skills = () => {
     return ( 
         <section id="skills">
-            <h1 className="section-title">Skills</h1>
-            <div className="grid md:grid-cols-8 grid-cols-4 gap-8">
-                <img className='skills-img' src="https://icongr.am/devicon/javascript-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/python-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/ruby-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/django-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/nodejs-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/rails-original-wordmark.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/typescript-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/react-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/vuejs-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/bootstrap-plain.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/html5-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/css3-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/postgresql-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/mongodb-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/mysql-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' width="60" height="60" alt="Firebase" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"/>
-                <img className='skills-img' width="60" height="60" alt="Firebase" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-plain.svg"/>
-                <img className='skills-img' src="https://icongr.am/devicon/git-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/github-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' src="https://icongr.am/devicon/docker-original.svg?size=60&color=currentColor" alt="" />
-                
-                <img className='skills-img' src="https://icongr.am/devicon/wordpress-original.svg?size=60&color=currentColor" alt="" />
-                <img className='skills-img' width="60" height="60" alt="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
-                <img className='skills-img' width="60" height="60" alt="Illustrator" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"/>
-                <img className='skills-img' width="60" height="60" alt="Photoshop" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"/>
-
-            </div>
-            <hr className="section-border"/> 
+            <h3 className="md:text-base text-sm text-center uppercase font-semibold">My 
+                <span className="text-cyan-400 ml-2">Talent</span>
+            </h3>
+            <h1 className="section-title">Professional Skills</h1>
+            <div className="grid md:grid-cols-6 grid-cols-3 md:gap-8 gap-4 items-center">
+                {skillsData.map((skill, index) => (
+                    <figure className="flex flex-col items-center justify-center bg-slate-800 shadow-md shadow-gray-800 hover:-translate-y-2 border-2 border-slate-800  hover:border-cyan-500 duration-300 md:p-4 p-2 md:w-32 w-28 rounded-lg">
+                        <img key={index} className='md:w-12 w-10' src={skill.src} alt={skill.name} loading="lazy" decoding="async" />
+                        <span className="mt-2">{skill.name}</span>
+                    </figure>
+                ))}
+            </div> 
         </section>
      );
 }

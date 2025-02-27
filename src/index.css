@@ -19,11 +19,11 @@ body {
     @apply py-2 pl-1 pr-3 my-2 bg-slate-800 focus-within:bg-slate-700 rounded-md w-full border-2 border-cyan-900 focus-within:border-gray-500 outline-none
   }
   .btn {
-    @apply px-3 py-2 border-2 border-white bg-gradient-to-r from-cyan-400 to-cyan-700 border-none text-white duration-500 rounded-md font-medium transition hover:translate-x-1 hover:scale-105 
+    @apply px-3 py-2 border border-white bg-gradient-to-r from-cyan-400 to-cyan-600 border-none text-white rounded-md font-medium  
   }
 
   .section-title {
-    @apply md:text-3xl sm:text-2xl text-xl text-slate-400 text-center font-extrabold md:mt-8 md:mb-16 mt-4 mb-8
+    @apply md:text-3xl sm:text-2xl text-xl text-slate-200 text-center font-extrabold md:mt-4 md:mb-16 mt-4 mb-8
   }
 
   .section-border {
@@ -31,12 +31,12 @@ body {
   }
 
   .icon-btn {
-    @apply rounded-lg shadow-lg text-slate-400 md:shadow-md md:shadow-slate-800 shadow-zinc-900 bg-slate-800 hover:bg-slate-950 duration-500 p-2 md:my-4 my-3 mx-2
+    @apply rounded-lg shadow-lg text-slate-400 md:shadow-sm md:shadow-slate-700 shadow-slate-800 bg-slate-700 hover:bg-slate-800 duration-500 p-2 md:my-4 my-3
   }
 
-  .skills-img {
-    @apply shadow-md shadow-gray-800 md:p-4 p-2 w-20 rounded-lg
-  }
+  /* .skills-img {
+    @apply bg-slate-800 shadow-md shadow-gray-800 md:p-4 p-2 w-20 rounded-lg
+  } */
 }
 
 

@@ -7,14 +7,14 @@ import Skills from "../components/skills/skills";
 
 const Home = () => {
     return ( 
-        <>
+        <div className="md:max-w-7xl w-full mx-auto flex flex-col items-center justify-center">
             <Hero />
             <About />
             <Services />
             <Skills />
             <Projects />
             <Contact />
-        </>
+        </div>
      );
 }
  

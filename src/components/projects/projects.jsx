@@ -3,9 +3,11 @@ import { projectsData } from "../../data/data";
 export default function Projects() {
   return (
     <section id="projects" className="py-12">
+            <hr className="section-border"/> 
+
       <div>
         <h1 className="text-3xl font-bold text-center mb-8 text-gray-200">Some of my Work</h1>
-        <div className="grid md:grid-cols-3 md:gap-8 sm:gap-8 gap-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 sm:gap-8 gap-4">
           {projectsData.map((item, index) => (
             <div
               key={index}
