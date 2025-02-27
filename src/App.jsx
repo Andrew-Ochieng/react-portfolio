@@ -4,6 +4,7 @@ import Footer from './components/footer'
 import Navbar from './components/navbar'
 import { ScrollToTop } from './components/scrollToTop'
 import Home from './pages/Home'
+import Blog from './pages/blog/Blog'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <div className='md:m-8 m-4 lg:mx-28 md:mx-16 text-gray-200'>
           <Routes>
               <Route path='/' element={ <Home /> } />
+              <Route path='/articles' element={ <Blog /> } />
           </Routes>
         </div>
         <Footer />
