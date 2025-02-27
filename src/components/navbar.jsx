@@ -33,10 +33,10 @@ const Navbar = () => {
             <nav ref={menuRef} className='md:px-32 px-4 py-4 top-0 left-0 sticky z-[100] bg-gray-900 text-gray-200 opacity-80 shadow-xl'>
                 <div className='md:flex items-center justify-between'>
                     <div className="flex justify-between items-center">
-                        <Link to='/' className='md:text-2xl text-xl font-semibold'>
-                            andrew.
+                        <Link to='/' className='md:text-2xl text-xl font-semibold text-white'>
+                            <span className="text-cyan-500">Andrew</span> Ochieng
                         </Link>
-                        <button onClick={() => setOpen((prev) => !prev)} className="md:hidden text-xl text-gray-400">
+                        <button onClick={() => setOpen((prev) => !prev)} className="md:hidden text-xl text-white border-2 border-white rounded-full p-2">
                             {open ? <FaTimes /> : <FaBars />}
                         </button>
                     </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className={`${open ? "left-0" : "left-[-100%]"} sm:hidden absolute top-0 right-0 bottom-0 space-y-8 py-6 px-8 w-[85%] h-screen duration-300 ease-in-out bg-gray-800`}>
+                <div className={`${open ? "left-0" : "left-[-100%]"} sm:hidden absolute top-0 right-0 bottom-0 space-y-8 py-6 px-8 w-[85%] h-screen duration-300 ease-in-out bg-slate-900 opacity-100`}>
                     <ul className="flex flex-col justify-center mt-8 text-base font-medium">
                         {menus.map((item, index) => (
                             <div key={index}>
