@@ -3,7 +3,7 @@ import { projectsData } from "../../data/data";
 export default function Projects() {
   return (
     <section id="projects" className="py-12">
-            <hr className="section-border"/> 
+            {/* <hr className="section-border"/>  */}
 
       <div>
         <h1 className="text-3xl font-bold text-center mb-8 text-gray-200">Some of my Work</h1>
@@ -38,7 +38,7 @@ export default function Projects() {
           </a>
         </div>
       </div>
-      <hr className="mt-12 border-t border-gray-700" />
+      {/* <hr className="mt-12 border-t border-gray-700" /> */}
     </section>
   );
 }

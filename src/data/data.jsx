@@ -15,7 +15,8 @@ import appDevIcon from '../assets/services/app.svg'
 import apiIcon from '../assets/services/api.svg'
 import paymentIcon from '../assets/services/payment.svg'
 import mentorshipIcon from '../assets/services/mentorship.svg'
-
+ 
+import { Briefcase, GraduationCap, Code, PenTool, Users, MonitorSmartphone, Wrench } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 
@@ -74,6 +75,93 @@ const servicesData = [
         details: "Finds great joy in sharing my knowledge with others. As a technical mentor this allows me to give back to the community."
     },
 ]
+
+
+const experiencesData = [
+  {
+    company: "Vabrise Technologies",
+    role: "Technical Lead",
+    duration: "Jan 2023 – Present",
+    icon: <Users size={16} />, // Leadership & Management Icon
+    responsibilities: [
+      "Establishing the company’s technical vision and leading all aspects of the company’s technology development and services delivered to company's customers.",
+      "Evaluating and implementing new systems and infrastructure.",
+      "Responsible for championing engineering culture and empowering upcoming tech talent in within the company.",
+      "Provide leadership within the engineering department through close collaboration, knowledge sharing, and mentorship."
+    ]
+  },
+  {
+    company: "Custometrix",
+    role: "Software Developer Intern",
+    duration: "Nov 2024 – Feb 2025",
+    icon: <Code size={16} />, // Coding & Development Icon
+    responsibilities: [
+      "Maintenance and optimization of the company platforms including system design, specifications development, and system implementation.",
+      "Implemented new features, improved application performance, and resolved critical bugs.",
+      "Collaborated with cross-functional teams, including designers and product managers, to enhance user experience."
+    ]
+  },
+  {
+    company: "Space Ya Tech",
+    role: "Frontend Developer Intern",
+    duration: "May 2024 – Oct 2024",
+    icon: <MonitorSmartphone size={16} />, // Frontend & UI Development Icon
+    responsibilities: [
+      "Built interactive features and functionalities using modern front-end technologies.",
+      "Optimized code for performance and responsiveness across various devices.",
+      "Collaborated with designers, back-end developers, and program leads to deliver exceptional user experiences."
+    ]
+  },
+  {
+    company: "Women In Mining Kenya",
+    role: "Web Developer",
+    duration: "Apr 2023 – May 2023",
+    icon: <PenTool size={16} />, // UI/UX & Web Design Icon
+    responsibilities: [
+      "Created a fully responsive visual design of the website.",
+      "Optimized SEO for the website for traffic purposes.",
+      "Performed regular maintenance for optimum speed & interactivity."
+    ]
+  },
+  {
+    company: "EngStan Solutions Ltd",
+    role: "Web Developer",
+    duration: "Feb 2023 – Apr 2023",
+    icon: <Wrench size={16} />, // Maintenance & Optimization Icon
+    responsibilities: [
+      "Designed a Figma UI for the website.",
+      "Ensured cross-browser compatibility and optimized site performance.",
+      "Implemented SEO to increase traffic."
+    ]
+  }
+];
+
+const educationData = [
+  { 
+    school: "Moringa School", 
+    degree: "Certificate in Software Development", 
+    year: "2022 - 2023", 
+    icon: <GraduationCap size={16} />,
+    content: [
+        "Completed an intensive, project-based training program focusing on full-stack software development.",
+        "Gained hands-on experience with modern web technologies and software engineering principles.",
+        "Collaborated on multiple team projects, simulating real-world software development scenarios.- Completed an intensive, project-based training program focusing on full-stack software development. - Gained hands-on experience with modern web technologies and software engineering principles. - Collaborated on multiple team projects, simulating real-world software development scenarios."
+    ]
+},
+  { 
+    school: "University of Eastern Africa, Baraton", 
+    degree: "Bachelor of Education", 
+    year: "2017 - 2021", 
+    icon: <GraduationCap size={16} />,
+    content: [
+        "Completed an intensive, project-based training program focusing on full-stack software development.",
+        "Gained hands-on experience with modern web technologies and software engineering principles.",
+        "Collaborated on multiple team projects, simulating real-world software development scenarios.- Completed an intensive, project-based training program focusing on full-stack software development. - Gained hands-on experience with modern web technologies and software engineering principles. - Collaborated on multiple team projects, simulating real-world software development scenarios."
+    ]
+}
+];
+
+
 
 const projectsData = [
     {
@@ -152,4 +240,4 @@ const skillsData = [
 ];
 
 
-export { projectsData, servicesData, socialsData, skillsData }
+export { projectsData, servicesData, socialsData, skillsData, experiencesData, educationData }

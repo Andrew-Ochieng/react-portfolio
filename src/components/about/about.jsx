@@ -37,7 +37,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <hr className="section-border" />
+            {/* <hr className="section-border" /> */}
         </section>
     );
 };

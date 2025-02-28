@@ -4,7 +4,7 @@ const Services = () => {
     
     return ( 
         <>
-            <section id="services">
+            <section id="services" className="md:mt-40 mt-20">
                 <h1 className="section-title">What I Do</h1>
                 <div className="grid md:grid-cols-3 md:gap-8 gap-4">
                     {servicesData.map((item, index) => (
@@ -15,7 +15,7 @@ const Services = () => {
                         </div>
                     ))}
                 </div>
-                <hr className="section-border"/> 
+                {/* <hr className="section-border"/>  */}
             </section>
         </>
      );
