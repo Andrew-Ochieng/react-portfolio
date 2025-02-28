@@ -26,14 +26,14 @@ export default function Blog() {
         return () => unsubscribe();
     }, [setPosts]);
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error}</div>;
+    if (loading) return <div className='min-h-screen flex items-center justify-center'>Loading...</div>;
+    if (error) return <div className='min-h-screen'>Error: {error}</div>;
 
 
     return (
         <div className='min-h-screen'>
             <h1>Blog</h1>
-            <ul className='md:flex items-center justify-start md:gap-8 gap-4 text-white'>
+            <ul className='grid md:grid-cols-6 items-center justify-start md:gap-8 gap-4 text-white'>
                 {posts && posts.length > 0 ? (
                     posts.map((post) => (
                         <Link
@@ -46,7 +46,9 @@ export default function Blog() {
                         </Link>
                     ))
                 ) : (
-                    <li>No posts found</li>
+                    <li className='min-h-screen'>
+                        No posts found
+                    </li>
                 )}
             </ul>
             
