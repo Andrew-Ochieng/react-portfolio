@@ -5,7 +5,7 @@ import { socialsData } from "../../data/data";
 
 const Hero = () => {
     return ( 
-        <section className="md:mb-40 mb-8" id="about">
+        <section className="md:mb-40 mb-16" id="about">
             <div className="grid md:grid-cols-2 md:gap-8 gap-4 md:pt-12 pt-6">
                 <div className="md:hidden flex items-center justify-center md:mt-0 mb-8">
                     <div className="md:px-8 px-4 pt-8 bg-slate-900 rounded-lg shadow-lg hover:shadow-xl shadow-slate-800 hover:shadow-slate-800">
@@ -56,7 +56,7 @@ const Hero = () => {
                         {socialsData.map((social, index) => (
                             <a  
                                 key={index}
-                                className="p-3 rounded-full border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white transition-all"
+                                className="md:p-3 p-2 rounded-full border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white transition-all"
                                 href={social.link}
                                 target="_blank"
                                 rel="noopener noreferrer"

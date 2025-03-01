@@ -85,7 +85,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             <div ref={menuRef} className={`${open ? "right-0" : "right-[-100%]"} fixed sm:hidden top-0 bottom-0 space-y-8 py-6 px-8 w-[85%] h-screen duration-300 ease-in-out bg-slate-900 opacity-100`}>
-                    <button onClick={() => setOpen((prev) => !prev)} className="md:hidden text-xl text-white border-2 border-white rounded-full p-2">
+                    <button onClick={() => setOpen((prev) => !prev)} className="md:hidden text-xl text-white border-2 border-white rounded-full p-2 absolute top-4 right-4">
                         {open ? <FaTimes /> : <FaBars />}
                     </button>
                 <ul className="flex flex-col justify-center mt-8 text-base font-medium">
