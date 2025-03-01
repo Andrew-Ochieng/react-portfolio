@@ -36,19 +36,18 @@ const ContactInfo = () => {
 
                 <p className="md:mt-5 mt-2 font-semibold text-cyan-400 uppercase">Reach Out</p>
                 
-                <div className="flex md:gap-4 gap-2 mt-2">
+                <div className="flex gap-4 mt-6">
                     {socialsData.map((social, index) => (
-                        <button key={index} className="icon-btn">
-                            <a  
-                                className="md:text-2xl text-xl text-cyan-500 hover:text-cyan-300 transition"
-                                href={social.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={`Visit ${social.name}`}
-                            >
-                                {social.icon}
-                            </a>
-                        </button>
+                        <a  
+                            key={index}
+                            className="md:p-3 p-2 rounded-full border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white transition-all"
+                            href={social.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Visit ${social.name}`}
+                        >
+                            {social.icon}
+                        </a>
                     ))}
                 </div>
             </div>
