@@ -76,7 +76,7 @@ const Navbar = () => {
                         <Link 
                             to='/articles' 
                             onClick={() => setOpen(false)}
-                            className='bg-cyan-600 text-white px-4 py-1 rounded-md hover:bg-cyan-600 duration-300 ease-in-out'>
+                            className='border border-cyan-500 text-white px-4 py-1 rounded-md hover:bg-cyan-500 duration-300 ease-in-out'>
                             Blog
                         </Link>
                     </ul>
@@ -97,7 +97,7 @@ const Navbar = () => {
                     <Link 
                         to='/articles' 
                         onClick={() => setOpen(false)}
-                        className='bg-cyan-600 text-white px-4 py-1 rounded-md hover:bg-cyan-600 duration-300 ease-in-out w-16'>
+                        className='border border-cyan-500 text-white px-4 py-1 rounded-md hover:bg-cyan-500 duration-300 ease-in-out w-16'>
                         Blog
                     </Link>
                 </ul>

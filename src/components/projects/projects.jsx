@@ -1,35 +1,68 @@
 import { projectsData } from "../../data/data";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-12">
-            {/* <hr className="section-border"/>  */}
-
+    <section id="projects" className="md:mt-32 mt-16 py-12">
       <div>
-        <h1 className="text-3xl font-bold text-center mb-8 text-gray-200">Some of my Work</h1>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 sm:gap-8 gap-4">
+        <h3 className="md:text-base text-sm text-center uppercase font-semibold">Latest 
+            <span className="text-cyan-400 ml-2">Projects</span>
+        </h3>
+        <h1 className="section-title">Some of my Work</h1>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {projectsData.map((item, index) => (
             <div
               key={index}
-              className="group p-1 border border-dashed border-slate-500 shadow shadow-slate-700 rounded-md bg-gray-800 transition-all duration-300 hover:shadow-lg hover:shadow-slate-600"
+              className="relative group rounded-lg bg-slate-900 overflow-hidden transition-all duration-300 shadow hover:shadow-sm shadow-slate-600"
             >
-              <a href={item.link} target="_blank" rel="noopener noreferrer" className="block">
-                <div>
-                  <img className="rounded-md w-full h-auto" src={item.image} alt={item.name} />
-                </div>
-                <div className="md:py-3 py-2 px-2">
-                  <h3 className="mb-2 font-semibold text-cyan-500 group-hover:text-cyan-400 transition-colors duration-300">
+              <div className="relative">
+                <img
+                  className="rounded-t-lg w-full h-64 object-cover"
+                  src={item.image}
+                  alt={item.name}
+                />
+                <div className="absolute inset-0 bg-slate-900 bg-opacity-90 opacity-95 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                  <h3 className="mb-2 font-bold text-cyan-400 text-lg group-hover:text-cyan-300 transition-colors duration-300">
                     {item.name}
                   </h3>
-                  <p className="font-light text-sm text-gray-300">{item.details}</p>
+                  <p className="font-medium md:text-base text-sm text-white mb-3">{item.details}</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {item.techStack.map((tech, i) => (
+                      <span key={i} className="text-xs bg-cyan-700 text-white font-semibold px-2 py-1 rounded-md">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-4">
+                    {item.codebaseLink !== "" && (
+                      <a
+                      href={item.codebaseLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors duration-300"
+                    >
+                      <FaGithub size={20} />
+                    </a>
+                    )}
+                    <a
+                      href={item.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors duration-300"
+                    >
+                      <FaExternalLinkAlt size={20} />
+                    </a>
+                  </div>
                 </div>
-              </a>
+              </div>
             </div>
           ))}
         </div>
+
         <div className="md:mt-12 mt-4 flex justify-center items-center">
           <a
-            className="btn bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded transition-colors duration-500 ease-in-out"
+            className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded transition-colors duration-500 ease-in-out"
             href="https://github.com/Andrew-Ochieng"
             target="_blank"
             rel="noopener noreferrer"
@@ -38,7 +71,6 @@ export default function Projects() {
           </a>
         </div>
       </div>
-      {/* <hr className="mt-12 border-t border-gray-700" /> */}
     </section>
   );
 }

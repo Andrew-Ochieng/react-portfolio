@@ -166,51 +166,68 @@ const educationData = [
 const projectsData = [
     {
         name: "Space Ya Tech",
-        link: "https://www.spaceyatech.com",
         image: img1,
-        details: "The fastest growing Africa, open-source community looking to change the way young Africans get started in technology"
+        details: "The fastest growing Africa, open-source community looking to change the way young Africans get started in technology",
+        techStack: ['React', 'Javascript', 'Node.js', 'MongoDB'],
+        codebaseLink: "https://github.com/SpaceyaTech/SYT-Web-Redesign",
+        liveLink: "https://www.spaceyatech.com",
     },
     {
         name: "Vabrise Technologies",
-        link: "https://vabrisetech.com",
         image: img2,
-        details: "A tech company that manages your bussiness without having to worry about the the software solutions you are using. Less hustle more growth."
+        details: "A tech company that manages your bussiness without having to worry about the the software solutions you are using. Less hustle more growth.",
+        techStack: ['React', 'Javascript', 'Node.js', 'MongoDB'],
+        codebaseLink: "https://github.com/Vabrise-Technologies-Ltd/Vabrise",
+        liveLink: "https://vabrisetech.com",
     },
     {
         name: "Lumbz Sportswear",
-        link: "https://lumbzsportswear.com",
         image: img3,
-        details: "One-stop shop for quality sportswear. Providing top-notch sportswear since 2023."
+        details: "One-stop shop for quality sportswear. Providing top-notch sportswear since 2023.",
+        techStack: ['Vue', 'Javascript', 'Django', 'PostgreSQL'],
+        codebaseLink: "",
+        liveLink: "https://lumbzsportswear.com",
+        
     },
     {
         name: "Savanna Academy",
-        link: "https://savannaacademy.com",
         image: img4,
-        details: "We offer training programs in Software Development, Cyber Security, Graphics Design and Digital Marketing under the instruction of industry experts."
+        details: "We offer training programs in Software Development, Cyber Security, Graphics Design and Digital Marketing under the instruction of industry experts.",
+        techStack: ['React', 'Javascript', 'Django', 'PostgreSQL'],
+        codebaseLink: "",
+        liveLink: "https://savannaacademy.com",
     },
     {
         name: "Engstan Solutions",
-        link: "https://engstansolutions.co.ke",
         image: img5,
-        details: "A branding business that helps customers order branded products from the comfort of their home"
+        details: "A branding business that helps customers order branded products from the comfort of their home",
+        techStack: ['React', 'Javascript', 'Supabase', 'HTML', 'CSS'],
+        codebaseLink: "",
+        liveLink: "https://engstansolutions.co.ke",
     },
     {
         name: "Ng’ara Maisha Sacco",
-        link: "https://nmsacco.co.ke",
         image: img6,
-        details: "We are a cooperative society committed to improving the financial well-being of its members through innovative and member-centric financial solutions"
+        details: "We are a cooperative society committed to improving the financial well-being of its members through innovative and member-centric financial solutions",
+        techStack: ['Wordpress'],
+        codebaseLink: "",
+        liveLink: "https://nmsacco.co.ke",
     },
     {
         name: "Kiddie Kloset",
-        link: "https://kiddiekloset.com",
         image: img7,
-        details: "A one-stop baby shop committed to ensure every mother and baby receives the best products that Enhance Joy, Care, Comfort and Safety for Mothers and Their Precious Babies."
+        details: "A one-stop baby shop committed to ensure every mother and baby receives the best products that Enhance Joy, Care, Comfort and Safety for Mothers and Their Precious Babies.",
+        techStack: ['Wordpress'],
+        codebaseLink: "",
+        liveLink: "https://kiddiekloset.com",        
     },
     {
-        name: "Ng’ara Maisha Sacco",
-        link: "https://tbcfunyula.com",
+        name: "Trinity Baptist Church - Funyula",
         image: img8,
-        details: "Trinity Baptist Church – Funyula, is a reformed christian church  with the mission to honor God through sincere worship, impactful preaching, and effective Biblical teaching."
+        details: "Trinity Baptist Church – Funyula, is a reformed christian church  with the mission to honor God through sincere worship, impactful preaching, and effective Biblical teaching.",
+        techStack: ['Wordpress', 'PHP'],
+        codebaseLink: "",
+        liveLink: "https://tbcfunyula.com",        
     },
 ]
 
