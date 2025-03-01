@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaChevronUp } from "react-icons/fa6";
+import { socialsData } from '../data/data';
 
 const Footer = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +29,22 @@ const Footer = () => {
 
     return ( 
         <footer className="bg-slate-700 text-white md:py-3 py-3 px-3 md:text-base text-sm">
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-between">
+                <div className="flex gap-4">
+                    {socialsData.map((social, index) => (
+                        <a  
+                            key={index}
+                            className="md:p-3 p-2 rounded-full border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white transition-all"
+                            href={social.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Visit ${social.name}`}
+                        >
+                            {social.icon}
+                        </a>
+                    ))}
+                </div>
+
                 <p>
                     Copyright © {year}  <span className="ml-1 text-cyan-400">Andrew Ochieng </span> 
                     | All rights reserved

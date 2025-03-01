@@ -17,30 +17,35 @@ import paymentIcon from '../assets/services/payment.svg'
 import mentorshipIcon from '../assets/services/mentorship.svg'
  
 import { Briefcase, GraduationCap, Code, PenTool, Users, MonitorSmartphone, Wrench } from "lucide-react";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaPhone, FaTwitter } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 
 const  socialsData = [
-    {
-        name: "Github",
-        link: "https://github.com/Andrew-Ochieng",
-        icon: <FaGithub />
-    },
-    {
-        name: "LinkedIn",
-        link: "https://www.linkedin.com/in/andrew-ochieng-00b076180/",
-        icon: <FaLinkedinIn />
-    },
-    {
-        name: "Gmail",
-        link: "mailto:andrewomosh44@gmail.com",
-        icon: <IoMailOutline />
-    },
-    {
-        name: "Twitter",
-        link: "https://x.com/Andrew__dev",
-        icon: <FaTwitter />
-    }
+  {
+    name: "Github",
+    link: "254710815080",
+    icon: <FaPhone />
+  },
+  {
+      name: "Github",
+      link: "https://github.com/Andrew-Ochieng",
+      icon: <FaGithub />
+  },
+  {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/andrew-ochieng-00b076180/",
+      icon: <FaLinkedinIn />
+  },
+  {
+      name: "Gmail",
+      link: "mailto:andrewomosh44@gmail.com",
+      icon: <IoMailOutline />
+  },
+  {
+      name: "Twitter",
+      link: "https://x.com/Andrew__dev",
+      icon: <FaTwitter />
+  }
 ]
 
 const servicesData = [
