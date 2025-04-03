@@ -21,10 +21,11 @@ const Hero = () => {
                         <Typewriter
                             words={[
                                 'Fullstack Developer.',
-                                'Wordpress Developer.', 
-                                'Graphics Designer.', 
-                                'UI/UX Designer,',
-                                'Technical Mentor.',
+                                'Lead Developer.', 
+                                'Frontend Developer.',
+                                'Backend Developer.',
+                                'UI/UX Designer.',
+                                'Graphics Designer.'
                             ]}
                             loop={Infinity}
                             cursor
