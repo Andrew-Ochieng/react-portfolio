@@ -43,8 +43,8 @@ export default function WorkExperience() {
                 </div>
               </div>
 
-              <h2 className="text-2xl text-cyan-500 font-semibold">{item.role || item.degree}</h2>
-              <h3 className="text-lg text-gray-300">{item.company || item.school}: {item.duration || item.year}</h3>
+              <h2 className="md:text-2xl text-lg text-cyan-500 font-semibold">{item.role || item.degree}</h2>
+              <h3 className="md:text-lg text-gray-300">{item.company || item.school}: {item.duration || item.year}</h3>
               <ul className="list-disc list-inside mt-2 text-gray-400">
                 {item.content?.map((task, i) => (
                   <li key={i}>{task}</li>
