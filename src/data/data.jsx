@@ -1,11 +1,12 @@
-import img1 from "../assets/projects/img1.jpg"
-import img2 from "../assets/projects/img2.jpg"
-import img3 from "../assets/projects/img3.png"
-import img4 from "../assets/projects/img4.png"
-import img5 from "../assets/projects/img5.jpg"
-import img6 from "../assets/projects/img6.png"
-import img7 from "../assets/projects/img7.png"
-import img8 from "../assets/projects/img8.png"
+import img1 from "../assets/projects/img-1.jpg"
+import img2 from "../assets/projects/img-2.jpg"
+import img3 from "../assets/projects/img-3.jpg"
+import img4 from "../assets/projects/img-4.jpg"
+import img5 from "../assets/projects/img-5.jpg"
+import img6 from "../assets/projects/img-6.jpg"
+import img7 from "../assets/projects/img-7.jpg"
+import img8 from "../assets/projects/img-8.jpg"
+import img9 from "../assets/projects/img-9.jpg"
 import djangoIcon from '../assets/skills/django.svg'
 import tailwindcssIcon from '../assets/skills/tailwindcss.svg'
 import wordpressIcon from '../assets/skills/wordpress.svg'
@@ -84,20 +85,30 @@ const servicesData = [
 
 const experiencesData = [
   {
+    company: "Tera Creations",
+    role: "Lead Web Developer",
+    duration: "Jan 2023 – Present",
+    icon: <Users size={16} />, // Leadership & Management Icon
+    responsibilities: [
+      "Overseeing the development process by managing a team of developers, ensuring that projects are completed on time, within budget, and meet client requirements.",
+      "Leading the technical design and architecture of web applications, ensuring that the systems are scalable, efficient, and maintainable.",
+      "Collaborating with clients to understand their needs and translate them into functional and aesthetically pleasing web solutions."
+    ]
+  },
+  {
     company: "Vabrise Technologies",
     role: "Technical Lead",
     duration: "Jan 2023 – Present",
     icon: <Users size={16} />, // Leadership & Management Icon
     responsibilities: [
       "Establishing the company’s technical vision and leading all aspects of the company’s technology development and services delivered to company's customers.",
+      "Provide leadership within the engineering department through close collaboration, knowledge sharing, and mentorship.",
       "Evaluating and implementing new systems and infrastructure.",
-      "Responsible for championing engineering culture and empowering upcoming tech talent in within the company.",
-      "Provide leadership within the engineering department through close collaboration, knowledge sharing, and mentorship."
     ]
   },
   {
     company: "Custometrix",
-    role: "Software Developer Intern",
+    role: "Software Developer",
     duration: "Nov 2024 – Feb 2025",
     icon: <Code size={16} />, // Coding & Development Icon
     responsibilities: [
@@ -116,28 +127,6 @@ const experiencesData = [
       "Optimized code for performance and responsiveness across various devices.",
       "Collaborated with designers, back-end developers, and program leads to deliver exceptional user experiences."
     ]
-  },
-  {
-    company: "Women In Mining Kenya",
-    role: "Web Developer",
-    duration: "Apr 2023 – May 2023",
-    icon: <PenTool size={16} />, // UI/UX & Web Design Icon
-    responsibilities: [
-      "Created a fully responsive visual design of the website.",
-      "Optimized SEO for the website for traffic purposes.",
-      "Performed regular maintenance for optimum speed & interactivity."
-    ]
-  },
-  {
-    company: "EngStan Solutions Ltd",
-    role: "Web Developer",
-    duration: "Feb 2023 – Apr 2023",
-    icon: <Wrench size={16} />, // Maintenance & Optimization Icon
-    responsibilities: [
-      "Designed a Figma UI for the website.",
-      "Ensured cross-browser compatibility and optimized site performance.",
-      "Implemented SEO to increase traffic."
-    ]
   }
 ];
 
@@ -150,19 +139,19 @@ const educationData = [
     content: [
         "Completed an intensive, project-based training program focusing on full-stack software development.",
         "Gained hands-on experience with modern web technologies and software engineering principles.",
-        "Collaborated on multiple team projects, simulating real-world software development scenarios.- Completed an intensive, project-based training program focusing on full-stack software development. - Gained hands-on experience with modern web technologies and software engineering principles. - Collaborated on multiple team projects, simulating real-world software development scenarios."
+        "Collaborated on multiple team projects, simulating real-world software development scenarios."
     ]
 },
-  { 
-    school: "University of Eastern Africa, Baraton", 
-    degree: "Bachelor of Education", 
-    year: "2017 - 2021", 
-    icon: <GraduationCap size={16} />,
-    content: [
-        "Completed an intensive, project-based training program focusing on full-stack software development.",
-        "Gained hands-on experience with modern web technologies and software engineering principles.",
-        "Collaborated on multiple team projects, simulating real-world software development scenarios.- Completed an intensive, project-based training program focusing on full-stack software development. - Gained hands-on experience with modern web technologies and software engineering principles. - Collaborated on multiple team projects, simulating real-world software development scenarios."
-    ]
+{ 
+  school: "University of Eastern Africa, Baraton", 
+  degree: "Bachelor of Education", 
+  year: "2017 - 2021", 
+  icon: <GraduationCap size={16} />,
+  content: [
+      "Gained in-depth knowledge in teaching methodologies, educational psychology, and curriculum development.",
+      "Acquired skills in instructional planning, classroom management, and student engagement.",
+      "Gained hands-on experience in classroom settings, applying educational theory to real-world teaching environment."
+  ]
 }
 ];
 
@@ -170,24 +159,32 @@ const educationData = [
 
 const projectsData = [
     {
-        name: "Space Ya Tech",
-        image: img1,
-        details: "The fastest growing Africa, open-source community looking to change the way young Africans get started in technology",
-        techStack: ['React', 'Javascript', 'Node.js', 'MongoDB'],
-        codebaseLink: "https://github.com/SpaceyaTech/SYT-Web-Redesign",
-        liveLink: "https://www.spaceyatech.com",
+      name: "Tera Creations",
+      image: img1,
+      details: "At Tera Creations, we blend cutting-edge AI technology with data-driven digital marketing strategies to help businesses scale, attract more customers, and dominate the online space. We don’t just market—we engineer success by leveraging AI for smarter, faster, and more effective results.",
+      techStack: ['Wordpress', 'PHP', 'Javascript'],
+      codebaseLink: "",
+      liveLink: "https://www.teracreations.com",
     },
     {
-        name: "Vabrise Technologies",
-        image: img2,
-        details: "A tech company that manages your bussiness without having to worry about the the software solutions you are using. Less hustle more growth.",
-        techStack: ['React', 'Javascript', 'Node.js', 'MongoDB'],
-        codebaseLink: "https://github.com/Vabrise-Technologies-Ltd/Vabrise",
-        liveLink: "https://vabrisetech.com",
+      name: "Kiddie Kloset",
+      image: img2,
+      details: "A one-stop baby shop committed to ensure every mother and baby receives the best products that Enhance Joy, Care, Comfort and Safety for Mothers and Their Precious Babies.",
+      techStack: ['Wordpress', 'PHP', 'Javascript'],
+      codebaseLink: "",
+      liveLink: "https://kiddiekloset.com",        
+    },
+    {
+      name: "Space Ya Tech",
+      image: img3,
+      details: "The fastest growing Africa, open-source community looking to change the way young Africans get started in technology",
+      techStack: ['React', 'Javascript', 'HTML', 'CSS'],
+      codebaseLink: "https://github.com/SpaceyaTech/SYT-Web-Redesign",
+      liveLink: "https://www.spaceyatech.com",
     },
     {
         name: "Lumbz Sportswear",
-        image: img3,
+        image: img4,
         details: "One-stop shop for quality sportswear. Providing top-notch sportswear since 2023.",
         techStack: ['Vue', 'Javascript', 'Django', 'PostgreSQL'],
         codebaseLink: "",
@@ -196,19 +193,11 @@ const projectsData = [
     },
     {
         name: "Savanna Academy",
-        image: img4,
+        image: img5,
         details: "We offer training programs in Software Development, Cyber Security, Graphics Design and Digital Marketing under the instruction of industry experts.",
         techStack: ['React', 'Javascript', 'Django', 'PostgreSQL'],
         codebaseLink: "",
         liveLink: "https://savannaacademy.com",
-    },
-    {
-        name: "Engstan Solutions",
-        image: img5,
-        details: "A branding business that helps customers order branded products from the comfort of their home",
-        techStack: ['React', 'Javascript', 'Supabase', 'HTML', 'CSS'],
-        codebaseLink: "",
-        liveLink: "https://engstansolutions.co.ke",
     },
     {
         name: "Ng’ara Maisha Sacco",
@@ -219,20 +208,28 @@ const projectsData = [
         liveLink: "https://nmsacco.co.ke",
     },
     {
-        name: "Kiddie Kloset",
-        image: img7,
-        details: "A one-stop baby shop committed to ensure every mother and baby receives the best products that Enhance Joy, Care, Comfort and Safety for Mothers and Their Precious Babies.",
-        techStack: ['Wordpress'],
-        codebaseLink: "",
-        liveLink: "https://kiddiekloset.com",        
+      name: "Vabrise Technologies",
+      image: img7,
+      details: "A tech company that manages your bussiness without having to worry about the the software solutions you are using. Less hustle more growth.",
+      techStack: ['React', 'Javascript', 'Node.js', 'MongoDB'],
+      codebaseLink: "https://github.com/Vabrise-Technologies-Ltd/Vabrise",
+      liveLink: "https://vabrisetech.com",      
     },
     {
-        name: "Trinity Baptist Church - Funyula",
-        image: img8,
-        details: "Trinity Baptist Church – Funyula, is a reformed christian church  with the mission to honor God through sincere worship, impactful preaching, and effective Biblical teaching.",
-        techStack: ['Wordpress', 'PHP'],
-        codebaseLink: "",
-        liveLink: "https://tbcfunyula.com",        
+      name: "Trinity Baptist Church - Funyula",
+      image: img8,
+      details: "Trinity Baptist Church – Funyula, is a reformed christian church  with the mission to honor God through sincere worship, impactful preaching, and effective Biblical teaching.",
+      techStack: ['Wordpress', 'PHP'],
+      codebaseLink: "",
+      liveLink: "https://tbcfunyula.com",        
+    },
+    {
+      name: "Engstan Solutions",
+      image: img9,
+      details: "A branding business that helps customers order branded products from the comfort of their home",
+      techStack: ['React', 'Javascript', 'Supabase', 'HTML', 'CSS'],
+      codebaseLink: "",
+      liveLink: "https://engstansolutions.co.ke",
     },
 ]
 

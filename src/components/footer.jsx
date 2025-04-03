@@ -29,8 +29,9 @@ const Footer = () => {
 
     return ( 
         <footer className="bg-slate-700 text-white md:py-3 py-3 px-3 md:text-base text-sm">
-            <div className="flex sm:flex-row flex-col items-center justify-between ">
-                <div className="flex sm:gap-4 gap-3 sm:mb-0 mb-3">                    {socialsData.map((social, index) => (
+            <div className="flex sm:flex-row flex-col items-center justify-between md:max-w-7xl w-full mx-auto">
+                <div className="flex sm:gap-4 gap-3 sm:mb-0 mb-3">                    
+                    {socialsData.map((social, index) => (
                         <a  
                             key={index}
                             className="md:p-3 p-2 rounded-full border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white transition-all"

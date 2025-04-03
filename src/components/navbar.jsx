@@ -51,7 +51,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className='md:px-32 px-4 py-4 top-0 left-0 sticky z-[100] bg-gray-900 text-gray-200 opacity-80 shadow-xl'>
+        <nav className='ms:px-0 px-4 py-4 top-0 left-0 sticky z-[100] bg-gray-900 text-gray-200 opacity-80 shadow-xl md:max-w-7xl w-full mx-auto'>
             <div className='md:flex items-center justify-between'>
                 {/* Logo and Toggle Button */}
                 <div className="flex justify-between items-center">
@@ -73,12 +73,12 @@ const Navbar = () => {
                                 </button>
                             </li>
                         ))}
-                        <Link 
+                        {/* <Link 
                             to='/articles' 
                             onClick={() => setOpen(false)}
                             className='border border-cyan-500 text-white px-4 py-1 rounded-md hover:bg-cyan-500 duration-300 ease-in-out'>
                             Blog
-                        </Link>
+                        </Link> */}
                     </ul>
                 </div>
             </div>
@@ -94,12 +94,12 @@ const Navbar = () => {
                             <button className="text-white">{item.name}</button>
                         </li>
                     ))}
-                    <Link 
+                    {/* <Link 
                         to='/articles' 
                         onClick={() => setOpen(false)}
                         className='border border-cyan-500 text-white px-4 py-1 rounded-md hover:bg-cyan-500 duration-300 ease-in-out w-16'>
                         Blog
-                    </Link>
+                    </Link> */}
                 </ul>
             </div>
         </nav>
