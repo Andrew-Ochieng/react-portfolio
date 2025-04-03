@@ -161,7 +161,7 @@ const projectsData = [
     {
       name: "Tera Creations",
       image: img1,
-      details: "At Tera Creations, we blend cutting-edge AI technology with data-driven digital marketing strategies to help businesses scale, attract more customers, and dominate the online space. We don’t just market—we engineer success by leveraging AI for smarter, faster, and more effective results.",
+      details: "We blend cutting-edge AI technology with data-driven digital marketing strategies to help businesses scale, attract more customers, and dominate the online space.",
       techStack: ['Wordpress', 'PHP', 'Javascript'],
       codebaseLink: "",
       liveLink: "https://www.teracreations.com",
