@@ -35,7 +35,7 @@ export default function WorkExperience() {
           {(showExperience ? experiencesData : educationData).map((item, index) => (
             <div
               key={index}
-              className="relative bg-slate-800 p-6 rounded-lg shadow-lg w-full xl:max-w-[1000px] md:max-w-[800px] mx-auto"
+              className="relative bg-slate-800 md:p-6 p-3 rounded-lg shadow-lg w-full xl:max-w-[1000px] md:max-w-[800px] mx-auto"
             >
               <div className="absolute -left-12 top-6 bg-cyan-200 p-2 rounded-full text-slate-800">
                 <div className="bg-cyan-500 p-1 rounded-full">
