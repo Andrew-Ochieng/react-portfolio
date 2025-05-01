@@ -98,7 +98,7 @@ const experiencesData = [
   {
     company: "Vabrise Technologies",
     role: "Technical Lead",
-    duration: "May 2024 – Present",
+    duration: "July 2024 – Present",
     icon: <Users size={16} />, // Leadership & Management Icon
     responsibilities: [
       "Establishing the company’s technical vision and leading all aspects of the company’s technology development and services delivered to company's customers.",
