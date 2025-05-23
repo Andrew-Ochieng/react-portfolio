@@ -98,7 +98,8 @@ const Hero = () => {
             variants={container}
           >
             <motion.a 
-              href="https://tinyurl.com/mrx6refe" 
+              // href="https://tinyurl.com/mrx6refe" 
+              href="https://tinyurl.com/ywra64vx"
               target="_blank" 
               rel="noopener noreferrer"
               className="px-4 py-2 border rounded-md border-cyan-500 bg-cyan-500 text-white font-medium 
