@@ -1,131 +1,172 @@
-import { useRef, useState } from 'react';
-import { FaPaperPlane } from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
+import { useForm } from 'react-hook-form';
+import { FaWhatsapp, FaPaperPlane } from 'react-icons/fa';
 import toast from 'react-hot-toast';
+import { motion } from 'framer-motion';
 
 const ContactForm = () => {
-  const form = useRef();
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting }
+  } = useForm();
 
-  const validateForm = () => {
-    const name = form.current.name.value.trim();
-    const email = form.current.email.value.trim();
-    const subject = form.current.subject.value.trim();
-    const messageContent = form.current.message.value.trim();
-
-    if (!name || !email || !subject || !messageContent) {
-      toast.error('Please fill in all fields.');
-      return false;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      toast.error('Please enter a valid email address.');
-      return false;
-    }
-
-    return true;
-  };
-
-  const sendEmail = async (e) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-
+  const onSubmit = async (data) => {
     try {
-      const result = await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
+      // Format the message for WhatsApp
+      const whatsappMessage = 
+        `New Contact Form Submission\n\n` +
+        `*Name:* ${data.name}\n` +
+        `*Subject:* ${data.subject}\n\n` +
+        `*Message:*\n${data.message}`;
 
-      console.log(result.text);
-      toast.success('Message sent successfully!');
-      form.current.reset();
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      
+      // Replace with your WhatsApp number (include country code without +)
+      const whatsappNumber = '254710815080';
+      
+      // Create WhatsApp link
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      // Open in new tab
+      window.open(whatsappUrl, '_blank');
+
+      toast.success('Redirecting to WhatsApp...');
+      reset();
     } catch (error) {
-      console.error('EmailJS error:', error);
-      toast.error('There was an error sending your message. Please try again later.');
-    } finally {
-      setIsSubmitting(false);
+      toast.error('Failed to prepare WhatsApp message. Please try again.');
     }
   };
 
   return (
-    <div className="md:p-6 p-4 bg-slate-900 rounded-xl shadow-xl shadow-slate-800 w-full">
-      <form ref={form} onSubmit={sendEmail} className="space-y-4">
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
-            Name
+    <motion.div 
+      className="md:p-8 p-6 bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl shadow-2xl shadow-slate-900/50 w-full max-w-lg"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="flex items-center gap-3 mb-6">
+        <FaWhatsapp className="text-3xl text-cyan-500" />
+        <h2 className="text-2xl font-bold text-white">Contact via WhatsApp</h2>
+      </div>
+
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+        <motion.div 
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.1 }}
+        >
+          <label htmlFor="name" className="block text-sm font-medium text-cyan-300 mb-1">
+            Your Name
           </label>
           <input
             id="name"
-            className="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md text-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            className={`w-full px-4 py-2 bg-slate-800 border ${
+              errors.name ? 'border-red-500' : 'border-slate-700'
+            } rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all`}
             type="text"
-            name="name"
-            placeholder="Enter name..."
-            required
-            maxLength="100"
+            placeholder="John Doe"
+            {...register('name', { 
+              required: 'Name is required',
+              maxLength: {
+                value: 100,
+                message: 'Name should not exceed 100 characters'
+              }
+            })}
           />
-        </div>
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-            Email
-          </label>
-          <input
-            id="email"
-            className="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md text-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-            type="email"
-            name="email"
-            placeholder="Enter email..."
-            required
-            maxLength="100"
-          />
-        </div>
-        <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
+          {errors.name && (
+            <p className="mt-1 text-sm text-red-400">{errors.name.message}</p>
+          )}
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          <label htmlFor="subject" className="block text-sm font-medium text-cyan-300 mb-1">
             Subject
           </label>
           <input
             id="subject"
-            className="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md text-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            className={`w-full px-4 py-2 bg-slate-800 border ${
+              errors.subject ? 'border-red-500' : 'border-slate-700'
+            } rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all`}
             type="text"
-            name="subject"
-            placeholder="Enter subject..."
-            required
-            maxLength="200"
+            placeholder="Regarding your services"
+            {...register('subject', { 
+              required: 'Subject is required',
+              maxLength: {
+                value: 200,
+                message: 'Subject should not exceed 200 characters'
+              }
+            })}
           />
-        </div>
-        <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
-            Message
+          {errors.subject && (
+            <p className="mt-1 text-sm text-red-400">{errors.subject.message}</p>
+          )}
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <label htmlFor="message" className="block text-sm font-medium text-cyan-300 mb-1">
+            Your Message
           </label>
           <textarea
             id="message"
-            className="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md text-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-            name="message"
-            placeholder="Enter Message..."
+            className={`w-full px-4 py-2 bg-slate-800 border ${
+              errors.message ? 'border-red-500' : 'border-slate-700'
+            } rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all`}
+            placeholder="Hello, I'm interested in..."
             rows="4"
-            required
-            maxLength="1000"
+            {...register('message', { 
+              required: 'Message is required',
+              maxLength: {
+                value: 1000,
+                message: 'Message should not exceed 1000 characters'
+              }
+            })}
           />
-        </div>
-        <button
+          {errors.message && (
+            <p className="mt-1 text-sm text-red-400">{errors.message.message}</p>
+          )}
+        </motion.div>
+
+        <motion.button
           type="submit"
           disabled={isSubmitting}
-          className={`mt-4 py-2 px-4 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-md transition duration-300 flex items-center justify-center ${
-            isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+          className={`w-full mt-6 py-3 px-6 bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800 text-white font-semibold rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg ${
+            isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-cyan-500/30'
           }`}
+          whileHover={!isSubmitting ? { scale: 1.02 } : {}}
+          whileTap={!isSubmitting ? { scale: 0.98 } : {}}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
         >
-          {isSubmitting ? 'Sending...' : 'Submit'}
-          <FaPaperPlane className="ml-2" />
-        </button>
+          {isSubmitting ? (
+            'Preparing WhatsApp...'
+          ) : (
+            <>
+              Send via WhatsApp <FaPaperPlane className="ml-2" />
+            </>
+          )}
+        </motion.button>
       </form>
-    </div>
+
+      <motion.p 
+        className="mt-6 text-center text-sm text-slate-400"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+      >
+        You will be redirected to WhatsApp to complete sending your message.
+      </motion.p>
+    </motion.div>
   );
 };
 

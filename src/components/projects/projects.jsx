@@ -1,20 +1,35 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { projectsData } from "../../data/data";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Projects() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <section id="projects" className="md:mt-32 mt-16 py-12">
       <div>
-        <h3 className="md:text-base text-sm text-center uppercase font-semibold">Latest 
+        <div data-aos="fade-up">
+          <h3 className="md:text-base text-sm text-center uppercase font-semibold">
+            Latest
             <span className="text-cyan-400 ml-2">Projects</span>
-        </h3>
-        <h1 className="section-title">Some of my Work</h1>
+          </h3>
+          <h1 className="section-title text-center">Some of my Work</h1>
+        </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
           {projectsData.map((item, index) => (
             <div
               key={index}
               className="relative group rounded-lg bg-slate-900 overflow-hidden transition-all duration-300 shadow hover:shadow-sm shadow-slate-600"
+              data-aos="zoom-in-up"
+              data-aos-delay={index * 100}
             >
               <div className="relative">
                 <img
@@ -37,13 +52,13 @@ export default function Projects() {
                   <div className="flex items-center gap-4">
                     {item.codebaseLink !== "" && (
                       <a
-                      href={item.codebaseLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white transition-colors duration-300"
-                    >
-                      <FaGithub size={20} />
-                    </a>
+                        href={item.codebaseLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white transition-colors duration-300"
+                      >
+                        <FaGithub size={20} />
+                      </a>
                     )}
                     <a
                       href={item.liveLink}
@@ -60,7 +75,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="md:mt-12 mt-4 flex justify-center items-center">
+        <div className="md:mt-12 mt-4 flex justify-center items-center" data-aos="fade-up">
           <a
             className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded transition-colors duration-500 ease-in-out"
             href="https://github.com/Andrew-Ochieng"

@@ -17,7 +17,7 @@ import apiIcon from '../assets/services/api.svg'
 import paymentIcon from '../assets/services/payment.svg'
 import mentorshipIcon from '../assets/services/mentorship.svg'
  
-import { Briefcase, GraduationCap, Code, PenTool, Users, MonitorSmartphone, Wrench } from "lucide-react";
+import { GraduationCap, Code, Users, MonitorSmartphone } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaPhone, FaTwitter } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 
@@ -87,7 +87,7 @@ const experiencesData = [
   {
     company: "Tera Creations",
     role: "Lead Web Developer",
-    duration: "Jan 2025 – Present",
+    duration: "Nov 2024 – Present",
     icon: <Users size={16} />, // Leadership & Management Icon
     responsibilities: [
       "Overseeing the development process by managing a team of developers, ensuring that projects are completed on time, within budget, and meet client requirements.",
