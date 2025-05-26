@@ -18,15 +18,10 @@ import paymentIcon from '../assets/services/payment.svg'
 import mentorshipIcon from '../assets/services/mentorship.svg'
  
 import { GraduationCap, Code, Users, MonitorSmartphone } from "lucide-react";
-import { FaGithub, FaLinkedinIn, FaPhone, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 
 const  socialsData = [
-  {
-    name: "Github",
-    link: "254710815080",
-    icon: <FaPhone />
-  },
   {
       name: "Github",
       link: "https://github.com/Andrew-Ochieng",
