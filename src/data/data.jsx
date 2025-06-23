@@ -2,10 +2,10 @@ import img1 from "../assets/projects/img-1.jpg"
 import img2 from "../assets/projects/img-2.jpg"
 import img3 from "../assets/projects/img-3.jpg"
 import img4 from "../assets/projects/img-4.jpg"
-import img5 from "../assets/projects/img-5.jpg"
+import img5 from "../assets/projects/img-5.png"
 import img6 from "../assets/projects/img-6.jpg"
 import img7 from "../assets/projects/img-7.jpg"
-import img8 from "../assets/projects/img-8.jpg"
+import img8 from "../assets/projects/img-8.png"
 import img9 from "../assets/projects/img-9.jpg"
 import djangoIcon from '../assets/skills/django.svg'
 import tailwindcssIcon from '../assets/skills/tailwindcss.svg'
@@ -187,12 +187,12 @@ const projectsData = [
         
     },
     {
-        name: "Savanna Academy",
+        name: "Elimu360",
         image: img5,
-        details: "We offer training programs in Software Development, Cyber Security, Graphics Design and Digital Marketing under the instruction of industry experts.",
-        techStack: ['React', 'Javascript', 'Django', 'PostgreSQL'],
+        details: "Elimu360 is a comprehensive SaaS platform revolutionizing school administration, learning management, and institutional operations for educational institutions across Africa.",
+        techStack: ['React', 'Javascript', 'HTML', 'Tailwindcss'],
         codebaseLink: "",
-        liveLink: "https://savannaacademy.com",
+        liveLink: "https://elimu360.com",
     },
     {
         name: "Ng’ara Maisha Sacco",
@@ -214,7 +214,7 @@ const projectsData = [
       name: "Trinity Baptist Church - Funyula",
       image: img8,
       details: "Trinity Baptist Church – Funyula, is a reformed christian church  with the mission to honor God through sincere worship, impactful preaching, and effective Biblical teaching.",
-      techStack: ['Wordpress', 'PHP'],
+      techStack: ['PHP', 'Laravel', 'React', 'Javascript', 'MySQL'],
       codebaseLink: "",
       liveLink: "https://tbcfunyula.com",        
     },
