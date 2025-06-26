@@ -82,7 +82,7 @@ const experiencesData = [
   {
     company: "Tera Creations",
     role: "Lead Web Developer",
-    duration: "Nov 2024 – Present",
+    duration: "Nov 2024 – June 2025",
     icon: <Users size={16} />, // Leadership & Management Icon
     responsibilities: [
       "Overseeing the development process by managing a team of developers, ensuring that projects are completed on time, within budget, and meet client requirements.",
@@ -93,7 +93,7 @@ const experiencesData = [
   {
     company: "Vabrise Technologies",
     role: "Technical Lead",
-    duration: "July 2024 – Present",
+    duration: "July 2024 – June 2025",
     icon: <Users size={16} />, // Leadership & Management Icon
     responsibilities: [
       "Establishing the company’s technical vision and leading all aspects of the company’s technology development and services delivered to company's customers.",
